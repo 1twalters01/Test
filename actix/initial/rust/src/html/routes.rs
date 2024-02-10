@@ -2,7 +2,7 @@ use actix_web::{get, post, HttpRequest, HttpResponse, Responder, Result, web};
 use actix_files::NamedFile;
 use std::path::PathBuf;
 
-// Basic get request
+// Basic get request for html
 #[get("/")]
 async fn index() -> Result<impl Responder> {
     Ok(HttpResponse::Ok()
@@ -10,6 +10,24 @@ async fn index() -> Result<impl Responder> {
         .body(include_str!("index.html")))
 }
 
+// Basic get request for css
+#[get("/styles.css")]
+async fn style() -> Result<impl Responder> {
+    Ok(HttpResponse::Ok()
+      .content_type("text/css; charset=utf-8")
+      .body(include_str!("styles.css")))
+}
+
+// Basic get request for js
+#[get("/script.js")]
+async fn script() -> Result<impl Responder> {
+    Ok(HttpResponse::Ok()
+    .content_type("text/javascript; charset=utf-8")
+    .body(include_str!("script.js")))
+}
+
+
+// Get favicon
 #[get("/favicon.ico")]
 // pub async fn favicon(req: HttpRequest) -> Result<NamedFile> {
 async fn favicon(req: HttpRequest) -> Result<HttpResponse> {
@@ -25,20 +43,49 @@ async fn favicon(req: HttpRequest) -> Result<HttpResponse> {
         .body(image_content))
 }
 
-#[get("/styles.css")]
-async fn style() -> Result<impl Responder> {
+
+// get with 1 paramater for html
+#[get("/get-single/{param_1}")]
+async fn get_single(param_1: web::Path<String>) -> Result<impl Responder> {
+    let obj = GetSingle {
+        name: param_1.into_inner(),
+    };
+    
     Ok(HttpResponse::Ok()
-      .content_type("text/css; charset=utf-8")
-      .body(include_str!("styles.css")))
+        .content_type("text/html; charset=utf-8")
+        .body(include_str!("index.html")))
 }
 
-#[get("/script.js")]
-async fn script() -> Result<impl Responder> {
+
+// Get request with 2 parameters
+#[get("/get-double/{param_1}/{param_2}")]
+async fn get_double(params: web::Path<(String, f64)>) -> Result<HttpResponse> {
+    let (param1, param2) = params.into_inner();
+    let obj = GetDouble {
+        name: param1.to_string(),
+        age: param2,
+    };
+
     Ok(HttpResponse::Ok()
-    .content_type("text/javascript; charset=utf-8")
-    .body(include_str!("script.js")))
+        .content_type("text/html; charset=utf-8")
+        .body(include_str!("index.html")))
 }
 
+
+// Get large image
+
+
+// Get small video
+
+
+
+// Get large video and stream it
+
+
+
+
+
+// Basic post request using a form
 // #[post("/form")]
 // async fn form(req_body: web::Json<Payload>) -> impl Responder {
     // let res_body: Payload = Payload {
@@ -48,3 +95,6 @@ async fn script() -> Result<impl Responder> {
 
     // web::Json(res_body)
 // }
+
+
+// Basic post request using a form, and also with 2 parameters
