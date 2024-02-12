@@ -1,9 +1,14 @@
+// import {BookType} from "../types/book";
+require("../types/book.js");
+
 /** Represents a book */
 export class Book {
   /** @private @type {string} title - The title of the book */
   title;
   /** @private @type {string} ISBN - The ISBN of the book */
   ISBN;
+  /** @private @type {BookType} type - The type of the book */
+  type;
   /** @private @type {string} author - The author of the book */
   author;
   /** @private @type {number} length - The length of the book */
@@ -18,8 +23,9 @@ export class Book {
    * @param {string} ISBN - The ISBN of the book
    * @param {string} author - The author of the book
    * @param {number} length - The length of the book
+   * @param {BookType} type - The type of the book
    */
-  constructor(title, ISBN, author, length) {
+  constructor(title, ISBN, author, length, type=BookType.BOOK) {
     /** @private */
     this.title = String(title).split(" ").map(word => word[0].toUpperCase() + word.substring(1)).join(" ");
     /** @private */
@@ -30,6 +36,8 @@ export class Book {
       this.ISBN = "";
       console.error("invalid ISBN")
     }
+    /** @private */
+    this.type = BookType.EBOOK;
     /** @private */
     this.author = String(author).split(" ").map(word => word[0].toUpperCase() + word.substring(1)).join(" ");
     /** @private */
@@ -111,6 +119,11 @@ export class Book {
   /** @return {string} */
   getISBN() {
     return this.ISBN;
+  }
+
+  /** @return {BookType} */
+  getBookType() {
+    return this.type;
   }
 
   /** @return {string} */

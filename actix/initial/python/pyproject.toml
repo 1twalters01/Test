@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "src"
+version = "0.1.0"
+description = ""
+authors = ["1twalters01 <1twalters01>"]
+readme = "README.rst"
+
+[tool.poetry.scripts]
+run = "src.__main__:app"
+tests = "tests.__main__:tests"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^24.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
