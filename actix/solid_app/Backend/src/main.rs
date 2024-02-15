@@ -1,16 +1,17 @@
-mod routes;
+mod home;
+mod accounts;
 use actix_web::{web, App, HttpServer};
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
-            .service(routes::routes::script)
-            .service(routes::routes::css)
-            .service(routes::routes::about)
-            .service(routes::routes::app)
-            .service(routes::routes::not_found)
-            .service(routes::routes::index)
+            .service(home::routes::script)
+            .service(home::routes::css)
+            .service(home::routes::about)
+            .service(home::routes::app)
+            .service(home::routes::not_found)
+            .service(home::routes::index)
             
             .service(
                 web::scope("/api")
