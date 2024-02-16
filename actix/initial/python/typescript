@@ -1,0 +1,235 @@
+Script started on 2024-02-14 22:54:45+00:00 [TERM="xterm-256color" TTY="/dev/pts/7" COLUMNS="105" LINES="53"]
+[?2004h]0;tyler@tyler-MS-7D91: ~/Projects/Tests/actix/initial/python[01;32mtyler@tyler-MS-7D91[00m:[01;34m~/Projects/Tests/actix/initial/python[00m$ ls
+[?2004lgitignore  poetry.lock  pyproject.toml  README.rst  [0m[01;34msrc[0m  [01;34mtests[0m  typescript
+[?2004h]0;tyler@tyler-MS-7D91: ~/Projects/Tests/actix/initial/python[01;32mtyler@tyler-MS-7D91[00m:[01;34m~/Projects/Tests/actix/initial/python[00m$ nvim .
+[?2004l[?1049h[22;0;0t[?1h=[H[2J[?2004h[?2026$p[?u[c[?25h]11;?[?25l[>4;2m(B[m[H[2J[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m" ============================================================================(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m" Netrw Directory Listing                                        (B[m[38;2;242;205;205m(netrw v173)(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m"   /home/tyler/Projects/Tests/actix/initial/python(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m"   Sorted by(B[m[38;2;203;166;247m      name(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m"   Sort sequence:(B[m[38;2;203;166;247m [\/]$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\<core\%(\.\d\+\)\=\>(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.h$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.c$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.cpp$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\~\=\*$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m*(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.o$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.obj$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.info$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.swp$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\
+(B[m[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m"   Quick Help: (B[m[38;2;137;180;250m<F1>(B[m[38;2;147;153;178m:(B[mhelp  [38;2;137;180;250m-(B[m[38;2;147;153;178m:(B[mgo up dir  [38;2;137;180;250mD(B[m[38;2;147;153;178m:(B[mdelete  [38;2;137;180;250mR(B[m[38;2;147;153;178m:(B[mrename  [38;2;137;180;250ms(B[m[38;2;147;153;178m:(B[msort-by  [38;2;137;180;250mx(B[m[38;2;147;153;178m:(B[mspecial[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m" ==============================================================================(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[38;2;137;180;250m[48;2;42;43;60m../(B[m[48;2;42;43;60m                                                                                                   
+(B[m[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[38;2;137;180;250m./(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[38;2;137;180;250msrc/(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[38;2;137;180;250mtests/(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m.gitignore[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[mREADME.rst[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[mgitignore[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[mpoetry.lock[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[mpyproject.toml[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[mtypescript[K
+[38;2;30;30;46m~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+(B[m[38;2;205;214;244m[48;2;24;24;37m[No Name] [RO]                                                                         8,1            All[?1002h[?1006h[H(B[m[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m" ============================================================================(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m" Netrw Directory Listing                                        (B[m[38;2;242;205;205m(netrw v173)(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m"   /home/tyler/Projects/Tests/actix/initial/python(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m"   Sorted by(B[m[38;2;203;166;247m      name(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m"   Sort sequence:(B[m[38;2;203;166;247m [\/]$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\<core\%(\.\d\+\)\=\>(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.h$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.c$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.cpp$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\~\=\*$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m*(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.o$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.obj$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.info$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\.swp$(B[m[3m[38;2;108;112;134m,(B[m[38;2;203;166;247m\
+(B[m[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m"   Quick Help: (B[m[38;2;137;180;250m<F1>(B[m[38;2;147;153;178m:(B[mhelp  [38;2;137;180;250m-(B[m[38;2;147;153;178m:(B[mgo up dir  [38;2;137;180;250mD(B[m[38;2;147;153;178m:(B[mdelete  [38;2;137;180;250mR(B[m[38;2;147;153;178m:(B[mrename  [38;2;137;180;250ms(B[m[38;2;147;153;178m:(B[msort-by  [38;2;137;180;250mx(B[m[38;2;147;153;178m:(B[mspecial[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[3m[38;2;108;112;134m" ==============================================================================(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[38;2;137;180;250m[48;2;42;43;60m../(B[m[48;2;42;43;60m[K
+(B[m[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[38;2;137;180;250m./(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[38;2;137;180;250msrc/(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m[38;2;137;180;250mtests/(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[m.gitignore[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[mREADME.rst[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[mgitignore[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[mpoetry.lock[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[mpyproject.toml[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m  (B[mtypescript[K
+[38;2;30;30;46m~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+~[K
+(B[m[38;2;205;214;244m[48;2;24;24;37m[No Name] [RO]                                                                         8,1            All(B[m
+[J[8;4H[?25h[?25l[?1004h[?25h[?25l[53;95H~@k       [8;4H[?25h[?25l[53;95H   [8;4H[38;2;137;180;250m../(B[m[K[9;4H[38;2;137;180;250m[48;2;42;43;60m./(B[m[48;2;42;43;60m                                                                                                    [52;88H(B[m[38;2;205;214;244m[48;2;24;24;37m9[9;4H[?25h[?25l[53;95H(B[m~@k[9;4H[?25h[?25l[53;95H   [9;4H[38;2;137;180;250m./(B[m[K[10;4H[38;2;137;180;250m[48;2;42;43;60msrc/(B[m[48;2;42;43;60m                                                                                                  [52;88H(B[m[38;2;205;214;244m[48;2;24;24;37m10,1[10;4H[?25h[?25l[53;95H(B[m~@k[10;4H[?25h[?25l[53;95H   [10;4H[38;2;137;180;250msrc/(B[m[K[11;4H[38;2;137;180;250m[48;2;42;43;60mtests/(B[m[48;2;42;43;60m                                                                                                [52;89H(B[m[38;2;205;214;244m[48;2;24;24;37m1[11;4H[?25h[?25l[53;95H(B[m~@k[11;4H[?25h[?25l[53;95H   [11;4H[38;2;137;180;250mtests/(B[m[K[12;4H[48;2;42;43;60m.gitignore                                                                                            [52;89H(B[m[38;2;205;214;244m[48;2;24;24;37m2[12;4H[?25h[?25l[53;95H(B[m~@k[12;4H[?25h[?25l[53;95H   [12;4H.gitignore[K[13;4H[48;2;42;43;60mREADME.rst                                                                                            [52;89H(B[m[38;2;205;214;244m[48;2;24;24;37m3[13;4H[?25h[?25l[53;95H(B[m~@k[13;4H[?25h[?25l[53;95H   [13;4HREADME.rst[K[14;4H[48;2;42;43;60mgitignore                                                                                             [52;89H(B[m[38;2;205;214;244m[48;2;24;24;37m4[14;4H[?25h[?25l[53;95H(B[m~@k[14;4H[?25h[?25l[53;95H   [14;4Hgitignore[K[15;4H[48;2;42;43;60mpoetry.lock                                                                                           [52;89H(B[m[38;2;205;214;244m[48;2;24;24;37m5[15;4H[?25h[?25l[53;95H(B[m~@k[15;4H[?25h[?25l[53;95H   [15;4Hpoetry.lock[K[16;4H[48;2;42;43;60mpyproject.toml                                                                                        [52;89H(B[m[38;2;205;214;244m[48;2;24;24;37m6[16;4H[?25h[?25l[15A(B[m[38;2;69;71;90m1   (B[0;1m[38;2;250;179;135m[48;2;69;71;90m[(B[m[38;2;249;226;175mtool(B[m[38;2;147;153;178m.(B[m[38;2;249;226;175mpoetry(B[0;1m[38;2;250;179;135m[48;2;69;71;90m](B[m[61X[2;4H[38;2;69;71;90m  1 (B[m[38;2;137;180;250mname (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m"src"(B[m[61X[3;4H[38;2;69;71;90m  2 (B[m[38;2;137;180;250mversion (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m"0.1.0"(B[m[30X[4;4H[38;2;69;71;90m  3 (B[m[38;2;137;180;250mdescription (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m""(B[m   [5;4H[38;2;69;71;90m  4 (B[m[38;2;137;180;250mauthors (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;147;153;178m[(B[m[38;2;166;227;161m"1twalters01 <1twalters01>"(B[m[38;2;147;153;178m](B[m[K[6;4H[38;2;69;71;90m  5 (B[m[38;2;137;180;250mreadme (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m"README.rst"(B[m[55X[7;4H[38;2;69;71;90m  6 (B[m[76X[8;4H[38;2;69;71;90m  7 (B[m[38;2;147;153;178m[(B[m[38;2;249;226;175mtool(B[m[38;2;147;153;178m.(B[m[38;2;249;226;175mpoetry(B[m[38;2;147;153;178m.(B[m[38;2;249;226;175mscripts(B[m[38;2;147;153;178m][9;4H(B[m[38;2;69;71;90m  8 (B[m[38;2;137;180;250mrun (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m"src.__main__:app"[10;4H(B[m[38;2;69;71;90m  9 (B[m[38;2;137;180;250mtests (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m"tests.__main__:tests"[11;4H(B[m[38;2;69;71;90m 10 (B[m  [12;4H[38;2;69;71;90m 11 (B[m[38;2;147;153;178m[(B[m[38;2;249;226;175mtool(B[m[38;2;147;153;178m.(B[m[38;2;249;226;175mpoetry(B[m[38;2;147;153;178m.(B[m[38;2;249;226;175mdependencies(B[m[38;2;147;153;178m][13;4H(B[m[38;2;69;71;90m 12 (B[m[38;2;137;180;250mpython (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m"^3.10"[14;4H(B[m[38;2;69;71;90m 13 (B[m[38;2;137;180;250mrequests (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m"^2.31.0"[15;4H(B[m[38;2;69;71;90m 14 (B[m[7X[16;4H[38;2;69;71;90m 15 (B[m[38;2;147;153;178m[(B[m[38;2;249;226;175mtool(B[m[38;2;147;153;178m.(B[m[38;2;249;226;175mpoetry(B[m[38;2;147;153;178m.(B[m[38;2;249;226;175mdev-dependencies(B[m[38;2;147;153;178m](B[m[K[17;4H[38;2;69;71;90m 16 (B[m[38;2;137;180;250mpytest (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m"^5.2"
+(B[m[38;2;108;112;134m (B[m[38;2;69;71;90m   17 (B[m[38;2;137;180;250mblack (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m"^24.1.1"(B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m   18 (B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m   19 (B[m[38;2;147;153;178m[(B[m[38;2;249;226;175mbuild-system(B[m[38;2;147;153;178m](B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m   20 (B[m[38;2;137;180;250mrequires (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;147;153;178m[(B[m[38;2;166;227;161m"poetry-core>=1.0.0"(B[m[38;2;147;153;178m](B[m[K
+[38;2;108;112;134m (B[m[38;2;69;71;90m   21 (B[m[38;2;137;180;250mbuild-backend (B[m[38;2;137;220;235m=(B[m[38;2;137;180;250m (B[m[38;2;166;227;161m"poetry.core.masonry.api"(B[m[K[30B[38;2;205;214;244m[48;2;24;24;37m~/Projects/Tests/actix/initial/python/pyproject.toml                                   1,1 [1;8H[?25h[?25l[H(B[m[38;2;108;112;134m-
+│[3;1H│[4;1H│[5;1H│[6;1H│[7;1H│[8;1H-
+│[10;1H│[11;1H│[12;1H-
+│[14;1H│[15;1H│[16;1H-
+│[18;1H│[19;1H│[20;1H-
+│[22;1H│[1;8H[?25h[?25l[53;95H(B[m:[1;8H[?25h[?25l[52B[J:[?1002l[?1006l[?25h[?25lq[?25h[?25l[53;1H[?25h[?25l[?1002h[?1006h[?25h[?25l[?1002l[?1006l(B[m[?25h[?1l>[>4;0m[?1049l[23;0;0t[?2004l[?1004l[?25h[?2004h]0;tyler@tyler-MS-7D91: ~/Projects/Tests/actix/initial/python[01;32mtyler@tyler-MS-7D91[00m:[01;34m~/Projects/Tests/actix/initial/python[00m$ poetry run
+[?2004l
+[31;1mNot enough arguments (missing: "args")[39;22m
+[?2004h]0;tyler@tyler-MS-7D91: ~/Projects/Tests/actix/initial/python[01;32mtyler@tyler-MS-7D91[00m:[01;34m~/Projects/Tests/actix/initial/python[00m$ poetry run
+[?2004l
+[31;1mNot enough arguments (missing: "args")[39;22m
+[?2004h]0;tyler@tyler-MS-7D91: ~/Projects/Tests/actix/initial/python[01;32mtyler@tyler-MS-7D91[00m:[01;34m~/Projects/Tests/actix/initial/python[00m$ poetry run
+[?2004l
+[31;1mNot enough arguments (missing: "args")[39;22m
+[?2004h]0;tyler@tyler-MS-7D91: ~/Projects/Tests/actix/initial/python[01;32mtyler@tyler-MS-7D91[00m:[01;34m~/Projects/Tests/actix/initial/python[00m$ poetry run[4Pnvim .poetry run[Kpod[Ketry
+[?2004l[39;1mPoetry[39;22m (version [36m1.7.1[39m)
+
+[39;1mUsage:[39;22m
+  command [options] [arguments]
+
+[39;1mOptions:[39;22m
+  [36m-h, --help[39m                 Display help for the given command. When no command is given display help for the [34mlist[39m command.
+  [36m-q, --quiet[39m                Do not output any message.
+  [36m-V, --version[39m              Display this application version.
+  [36m    --ansi[39m                 Force ANSI output.
+  [36m    --no-ansi[39m              Disable ANSI output.
+  [36m-n, --no-interaction[39m       Do not ask any interactive question.
+  [36m    --no-plugins[39m           Disables plugins.
+  [36m    --no-cache[39m             Disables Poetry source caches.
+  [36m-C, --directory=DIRECTORY[39m  The working directory for the Poetry command (defaults to the current working directory).
+  [36m-v|vv|vvv, --verbose[39m       Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug.
+
+[39;1mAvailable commands:[39;22m
+  [36mabout[39m              Shows information about Poetry.
+  [36madd[39m                Adds a new dependency to [32mpyproject.toml[39m.
+  [36mbuild[39m              Builds a package, as a tarball and a wheel by default.
+  [36mcheck[39m              Validates the content of the [32mpyproject.toml[39m file and its consistency with the poetry.lock file.
+  [36mconfig[39m             Manages configuration settings.
+  [36mexport[39m             Exports the lock file to alternative formats.
+  [36mhelp[39m               Displays help for a command.
+  [36minit[39m               Creates a basic [32mpyproject.toml[39m file in the current directory.
+  [36minstall[39m            Installs the project dependencies.
+  [36mlist[39m               Lists commands.
+  [36mlock[39m               Locks the project dependencies.
+  [36mnew[39m                Creates a new Python project at <path>.
+  [36mpublish[39m            Publishes a package to a remote repository.
+  [36mremove[39m             Removes a package from the project dependencies.
+  [36mrun[39m                Runs a command in the appropriate environment.
+  [36msearch[39m             Searches for packages on remote repositories.
+  [36mshell[39m              Spawns a shell within the virtual environment.
+  [36mshow[39m               Shows information about packages.
+  [36mupdate[39m             Update the dependencies as according to the [32mpyproject.toml[39m file.
+  [36mversion[39m            Shows the version of the project or bumps it when a valid bump rule is provided.
+
+ [32mcache[39m
+  [36mcache clear[39m        Clears a Poetry cache by name.
+  [36mcache list[39m         List Poetry's caches.
+
+ [32mdebug[39m
+  [36mdebug info[39m         Shows debug information.
+  [36mdebug resolve[39m      Debugs dependency resolution.
+
+ [32menv[39m
+  [36menv info[39m           Displays information about the current environment.
+  [36menv list[39m           Lists all virtualenvs associated with the current project.
+  [36menv remove[39m         Remove virtual environments associated with the project.
+  [36menv use[39m            Activates or creates a new virtualenv for the current project.
+
+ [32mself[39m
+  [36mself add[39m           Add additional packages to Poetry's runtime environment.
+  [36mself install[39m       Install locked packages (incl. addons) required by this Poetry installation.
+  [36mself lock[39m          Lock the Poetry installation's system requirements.
+  [36mself remove[39m        Remove additional packages from Poetry's runtime environment.
+  [36mself show[39m          Show packages from Poetry's runtime environment.
+  [36mself show plugins[39m  Shows information about the currently installed plugins.
+  [36mself update[39m        Updates Poetry to the latest version.
+
+ [32msource[39m
+  [36msource add[39m         Add source configuration for project.
+  [36msource remove[39m      Remove source configured for the project.
+  [36msource show[39m        Show information about sources configured for the project.
+[?2004h]0;tyler@tyler-MS-7D91: ~/Projects/Tests/actix/initial/python[01;32mtyler@tyler-MS-7D91[00m:[01;34m~/Projects/Tests/actix/initial/python[00m$ poetry run
+[?2004l
+[31;1mNot enough arguments (missing: "args")[39;22m
+[?2004h]0;tyler@tyler-MS-7D91: ~/Projects/Tests/actix/initial/python[01;32mtyler@tyler-MS-7D91[00m:[01;34m~/Projects/Tests/actix/initial/python[00m$ poetry run run
+[?2004l[33mWarning: 'run' is an entry point defined in pyproject.toml, but it's not installed as a script. You may get improper `sys.argv[0]`.
+
+The support to run uninstalled scripts will be removed in a future release.
+
+Run `poetry install` to resolve and get rid of this message.
+[39m
+http://localhost:8080/json/
+<Response [200]>
+"Hello world!"
+http://localhost:8080/json/get-single/test
+{"name":"test"}
+{'name': 'test'}
+name: test
+http://localhost:8080/json/get-double/test/45.62
+{"name":"test","age":45.62}
+{'name': 'test', 'age': 45.62}
+name: test
+age: 45.62
+http://localhost:8080/json/echo
+{"field_1":"Response","amount":10}
+{'field_1': 'Response', 'amount': 10}
+field 1: Response
+amount: 10
+http://localhost:8080/json/post-single/test
+{"field_1":"Response","amount":50,"param":"test"}
+{'field_1': 'Response', 'amount': 50, 'param': 'test'}
+field 1: Response
+amount: 50
+param: test
+http://localhost:8080/json/post-double/test/73.99
+{"field_1":"Response","amount":50,"param_1":"test","param_2":73.99}
+{'field_1': 'Response', 'amount': 50, 'param_1': 'test', 'param_2': 73.99}
+field 1: Response
+amount: 50
+param 1: test
+param 2: 73.99
+[?2004h]0;tyler@tyler-MS-7D91: ~/Projects/Tests/actix/initial/python[01;32mtyler@tyler-MS-7D91[00m:[01;34m~/Projects/Tests/actix/initial/python[00m$ poetry run run
+[?2004l[33mWarning: 'run' is an entry point defined in pyproject.toml,

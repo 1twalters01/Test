@@ -1,6 +1,9 @@
 use actix_web::{get, post, HttpRequest, HttpResponse, Responder, Result, web};
-use actix_files::NamedFile;
-use std::path::PathBuf;
+use serde::{Deserialize, Serialize};
+use async_stream::{try_stream, __private::AsyncStream};
+use std::fs;
+use std::io::Read;
+use bytes::Bytes;
 
 // Basic get request for html
 #[get("/")]
@@ -30,17 +33,75 @@ async fn script() -> Result<impl Responder> {
 // Get favicon
 #[get("/favicon.ico")]
 // pub async fn favicon(req: HttpRequest) -> Result<NamedFile> {
-async fn favicon(req: HttpRequest) -> Result<HttpResponse> {
-    // let path: PathBuf = req.match_info().query("./favicon.ico").parse().unwrap();
-    // let file = NamedFile::open(path)?;
-    // Ok(file)
-
-    // Ok(NamedFile::open("favicon.png")?)
-
-    let image_content = web::Bytes::from(std::fs::read("favicon.png")?);
+async fn favicon() -> Result<HttpResponse> {
+    // if running from rust and not rust/src
+    // println!("The current directory is {}", std::env::current_dir()?.display());
+    let image_content = web::Bytes::from(std::fs::read("src/html/favicon.ico").unwrap());
     Ok(HttpResponse::Ok()
         .content_type("image/png")
         .body(image_content))
+}
+
+
+
+// Get large image
+#[get("/large-image")]
+// pub async fn favicon(req: HttpRequest) -> Result<NamedFile> {
+async fn large_image() -> Result<HttpResponse> {
+    // if running from rust and not rust/src
+    // println!("The current directory is {}", std::env::current_dir()?.display());
+    // let image_content = web::Bytes::from(std::fs::read("src/html/favicon.ico").unwrap());
+    println!("working");
+    let stream: AsyncStream<Result<Bytes>, _> = try_stream! {
+        // let mut file = fs::File::open("src/html/large-image.jpg").unwrap();
+        let mut file = fs::File::open("src/html/favicon.ico").unwrap();
+        // let mut buffer: Vec<u8> = Vec::new();
+        let mut buffer = [0; 40960];
+        loop {
+            let n = file.read(&mut buffer[..])?;
+            if n == 0 {
+                break;
+            }
+            yield bytes::Bytes::copy_from_slice(&buffer[n..]);
+        }
+    };
+
+    Ok(HttpResponse::Ok()
+        .content_type("image/jpg")
+        .streaming(stream))
+}
+
+
+
+// Get small video
+#[get("/small-video")]
+// pub async fn favicon(req: HttpRequest) -> Result<NamedFile> {
+async fn small_video() -> Result<HttpResponse> {
+    // if running from rust and not rust/src
+    // println!("The current directory is {}", std::env::current_dir()?.display());
+    let image_content = web::Bytes::from(std::fs::read("src/html/favicon.ico").unwrap());
+    Ok(HttpResponse::Ok()
+        .content_type("image/png")
+        .body(image_content))
+}
+
+
+
+// Get large video and stream it
+#[get("/large-video")]
+// pub async fn favicon(req: HttpRequest) -> Result<NamedFile> {
+async fn large_video() -> Result<HttpResponse> {
+    let image_content = web::Bytes::from(std::fs::read("src/html/favicon.ico").unwrap());
+    Ok(HttpResponse::Ok()
+        .content_type("image/png")
+        .body(image_content))
+}
+
+
+
+#[derive(Debug, Deserialize, Serialize)]
+pub struct GetSingle {
+    pub name: String,
 }
 
 
@@ -50,36 +111,22 @@ async fn get_single(param_1: web::Path<String>) -> Result<impl Responder> {
     let obj = GetSingle {
         name: param_1.into_inner(),
     };
-    
-    Ok(HttpResponse::Ok()
-        .content_type("text/html; charset=utf-8")
-        .body(include_str!("index.html")))
-}
+    println!("obj: {:?}", obj);
 
+    // Ok(HttpResponse::Ok()
+    //     .content_type("text/html; charset=utf-8")
+    //     .body(include_str!("index.html")))
 
-// Get request with 2 parameters
-#[get("/get-double/{param_1}/{param_2}")]
-async fn get_double(params: web::Path<(String, f64)>) -> Result<HttpResponse> {
-    let (param1, param2) = params.into_inner();
-    let obj = GetDouble {
-        name: param1.to_string(),
-        age: param2,
-    };
+    // println!("html content: {:?}", html_content);
 
     Ok(HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
-        .body(include_str!("index.html")))
+        .body(include_str!("get-single.html")
+            // .replace("``", param_1.into_inner().as_str())
+            .as_bytes()))
+
 }
 
-
-// Get large image
-
-
-// Get small video
-
-
-
-// Get large video and stream it
 
 
 

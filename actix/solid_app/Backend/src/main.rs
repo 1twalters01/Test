@@ -15,9 +15,9 @@ async fn main() -> std::io::Result<()> {
             
             .service(
                 web::scope("/api")
-                .service(account::routes::login)
-                .service(account::routes::logout)
-                .service(account::register)
+                .service(accounts::routes::login)
+                .service(accounts::routes::logout)
+                .service(accounts::routes::register)
             )
     })
   .bind("127.0.0.1:8080")?

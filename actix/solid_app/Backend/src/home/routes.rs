@@ -1,8 +1,5 @@
 use actix_web::{get, HttpResponse, Responder, Result, web};
-use std::{
-    fs,
-    path::PathBuf,
-};
+use std::{fs, path::PathBuf};
 
 #[get("/favicon.ico")]
 async fn favicon() -> Result<HttpResponse> {

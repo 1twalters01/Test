@@ -2,7 +2,6 @@ mod json;
 mod html;
 
 use actix_web::{web, App, HttpServer};
-use actix_files::Files;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -26,6 +25,10 @@ async fn main() -> std::io::Result<()> {
                 .service(html::routes::index)
                 .service(html::routes::style)
                 .service(html::routes::script)
+                .service(html::routes::large_image)
+                .service(html::routes::small_video)
+                .service(html::routes::large_video)
+                .service(html::routes::get_single)
             )
     })
     .bind(("127.0.0.1", 8080))?
