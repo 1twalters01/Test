@@ -1,3 +1,4 @@
+use actix_web::http::header::ContentLength;
 use actix_web::{get, post, HttpRequest, HttpResponse, Responder, Result, web};
 use serde::{Deserialize, Serialize};
 use async_stream::{try_stream, __private::AsyncStream};
@@ -87,14 +88,65 @@ async fn small_video() -> Result<HttpResponse> {
 
 
 
+use tokio::fs::File;
+use tokio::io::{AsyncReadExt, AsyncSeekExt};
+
 // Get large video and stream it
 #[get("/large-video")]
 // pub async fn favicon(req: HttpRequest) -> Result<NamedFile> {
-async fn large_video() -> Result<HttpResponse> {
-    let image_content = web::Bytes::from(std::fs::read("src/html/favicon.ico").unwrap());
-    Ok(HttpResponse::Ok()
-        .content_type("image/png")
-        .body(image_content))
+async fn large_video(req: HttpRequest) -> Result<HttpResponse> {
+    let path = "../../../../../Videos/Melissa.mp4";
+    let file = match File::open(path).await {
+        Ok(file) => file,
+        Err(_) => return Ok(HttpResponse::NotFound().finish())
+    };
+
+    // Get total length of file
+    let metadata = match file.metadata().await {
+        Ok(metadata) => metadata,
+        Err(_) => return Ok(HttpResponse::InternalServerError().finish()),
+    };
+
+    let total_size = metadata.len();
+
+    // Handle Range header if present
+    let range_header = req.headers().get("Range").and_then(|h| h.to_str().ok());
+    let (start, end) = if let Some(range) = range_header {
+        let bytes_str = range.strip_prefix("bytes=").unwrap_or("");
+        let mut parts = bytes_str.split('-');
+        let start: u64 = parts.next().unwrap().parse().unwrap_or(0);
+        let end: u64 = parts.next().unwrap_or("").parse().unwrap_or(total_size - 1);
+        (start, end)
+    } else {
+        (0, total_size - 1)
+    };
+
+    let chunk_size = (end - start + 1) as usize;
+    let mut file = file;
+    if let Err(_) = file.seek(tokio::io::SeekFrom::Start(start)).await {
+        return Ok(HttpResponse::InternalServerError().finish());
+    }
+
+    // Create a stream to read the file in chunks
+    let stream = futures_util::stream::unfold(file, move |mut file| async move {
+        let mut buffer = vec![0; 8192];
+        match file.read(&mut buffer).await {
+            Ok(bytes_read) => {
+                if bytes_read == 0 {
+                    None
+                } else {
+                    Some((Ok(Bytes::from(buffer[..bytes_read].to_vec())), file))
+                }
+            },
+            Err(e) => Some((Err(e), file))
+        }
+    });
+
+    Ok(HttpResponse::PartialContent()
+        .insert_header(("Content-Range", format!("bytes {}-{}/{}", start, end, total_size)))
+        .insert_header(ContentLength(chunk_size))
+        .streaming(stream))
+
 }
 
 
